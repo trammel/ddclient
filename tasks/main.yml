@@ -4,6 +4,10 @@
 - name: Add the OS specific varibles
   include_vars: "{{ ansible_os_family }}.yml"
 
+- name: Install perl ssl package 
+  apt: name=libio-socket-ssl-perl state=present
+  when: ansible_os_family == "Debian" and ddclient_ssl == "yes" 
+  
 - name: Install the ddclient packages 
   apt: name={{ item }} state=present
   with_items: ddclient_ubuntu_pkg

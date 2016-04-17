@@ -15,6 +15,7 @@ The variables that can be passed to this role and a brief description about
 them are as follows:
 
     ddclient_syslog: yes
+    ddclient_ssl: "no"
     ddclient_protocol: namecheap
     ddclient_server: dynamicdns.park-your-domain.com
     ddclient_login: mydomain.com
