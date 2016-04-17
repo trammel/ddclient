@@ -14,6 +14,7 @@ Role Variables
 The variables that can be passed to this role and a brief description about
 them are as follows:
 
+    ddclient_ssl: "no"
     ddclient_protocol: "namecheap"
     ddclient_use: "web, web=checkip.dyndns.org/"
     ddclient_server: "dynamicdns.park-your-domain.com"
