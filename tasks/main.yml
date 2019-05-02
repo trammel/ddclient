@@ -1,6 +1,10 @@
 ---
 # tasks file for ddclient
 #
+- name: ddclient | Check OS
+  fail: msg="Not a supported OS"
+  when: ansible_os_family != 'Debian'
+
 - name: ddclient | Add the OS specific varibles
   include_vars: "{{ ansible_os_family }}.yml"
 
