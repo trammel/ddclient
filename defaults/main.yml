@@ -1,10 +1,11 @@
 ---
 # defaults file for ddclient
 #
-ddclient_syslog: yes
+ddclient_syslog: "yes"
+ddclient_ssl: "yes"
 ddclient_protocol: namecheap
 ddclient_server: dynamicdns.park-your-domain.com
 ddclient_login: mydomain.com
 ddclient_password: MY_PASSWORD
 ddclient_use: web, web=checkip.dyndns.org/
-ddclient_subdomain: mysubdomain   # {{mysubdomain}}.example.com
+ddclient_subdomain: mysubdomain   # {{ mysubdomain }}.example.com
