@@ -1,22 +1,22 @@
 ---
 # tasks file for ddclient
 #
-- name: ddclient | Check OS
+- name: Check OS
   fail: 
     msg: "Not a supported OS"
   when: ansible_os_family != 'Debian'
 
-- name: ddclient | Add the OS specific varibles
+- name: Add the OS specific varibles
   include_vars: "{{ ansible_os_family }}.yml"
 
-- name: ddclient | Install the ddclient packages
+- name: Install the ddclient packages
   apt: 
     name: "{{ item }}" 
     state: present
   with_items: "{{ ddclient_ubuntu_pkg }}"
   when: ansible_os_family == "Debian"
 
-- name: ddclient | Set ddclient config
+- name: Set ddclient config
   template: 
     src: ddclient.conf.j2 
     dest: "{{ ddclient_app_path }}/ddclient.conf"
