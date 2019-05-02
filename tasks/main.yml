@@ -6,7 +6,7 @@
 
 - name: Install the ddclient packages 
   apt: name={{ item }} state=present
-  with_items: ddclient_ubuntu_pkg
+  with_items: "{{ ddclient_ubuntu_pkg }}"
   when: ansible_os_family == "Debian"
 
 - name: ddclient | Set ddclient config 
