@@ -11,6 +11,7 @@
 
 - name: ddclient | Set ddclient config 
   template: src=ddclient.conf.j2 dest={{ddclient_app_path}}/ddclient.conf
+  mode: 0600
   when: ansible_os_family == "Debian"
   notify: 
     - restart ddclient
