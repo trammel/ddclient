@@ -2,4 +2,7 @@
 # handlers file for ddclient
 #
 - name: restart ddclient 
-  service: name=ddclient state=restarted enabled=yes
+  service:
+    name: ddclient
+    state: restarted
+    enabled: yes

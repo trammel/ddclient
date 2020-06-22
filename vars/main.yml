@@ -2,4 +2,5 @@
 # vars file for ddclient
 #
 ddclient_ubuntu_pkg:
-  - ddclient 
+  - ddclient
+  - libio-socket-ssl-perl

@@ -5,6 +5,8 @@ ddclient
 
 This role installs and configures DDclient. 'DDclient is a Perl client used to update dynamic DNS entries for accounts on Dynamic DNS Network Service Provider.'
 
+This is a fork of [Jonathan Rowlands ddclient](https://github.com/jgrowl/ddclient), cred for a good base goes to him.
+
 Requirements
 ------------
 
@@ -16,13 +18,14 @@ Role Variables
 The variables that can be passed to this role and a brief description about
 them are as follows:
 
+    ddclient_syslog: "yes"
     ddclient_ssl: "no"
     ddclient_protocol: "namecheap"
     ddclient_use: "web, web=checkip.dyndns.org/"
     ddclient_server: "dynamicdns.park-your-domain.com"
     ddclient_login: "mydomain.com"
     ddclient_password: "'MY_PASSWORD'"
-    ddclient_subdomain: "mysubdomain"                    # For example mysubdomain.example.com
+    ddclient_subdomain: "mysubdomain"   # {{ mysubdomain }}.example.com    
 
 Dependencies
 ------------
@@ -45,7 +48,5 @@ MIT
 Author Information
 ------------------
 
-Original: Jonathan Rowlands
-
-This is forked from Jonathan's code.
-
+Jonathan Rowlands
+David Isaksson
