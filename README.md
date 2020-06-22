@@ -45,4 +45,7 @@ MIT
 Author Information
 ------------------
 
-Jonathan Rowlands
+Original: Jonathan Rowlands
+
+This is forked from Jonathan's code.
+
